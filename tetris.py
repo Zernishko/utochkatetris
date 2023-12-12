@@ -14,16 +14,16 @@ class Text:
                             text='UTOCHKATETRIS', fgcolor='black',
                             size=TILE_SIZE * 1.45)
         self.font.render_to(self.app.screen, (WIN_W * 0.52, WIN_H * 0.10),
-                            text='next:', fgcolor='black',
+                            text='Next:', fgcolor='black',
                             size=TILE_SIZE * 1.2)
         self.font.render_to(self.app.screen, (WIN_W * 0.52, WIN_H * 0.34),
-                            text='score:', fgcolor='black',
+                            text='Score:', fgcolor='black',
                             size=TILE_SIZE * 1.2)
         self.font.render_to(self.app.screen, (WIN_W * 0.62, WIN_H * 0.42),
                             text=f'{self.app.tetris.score}', fgcolor='black',
                             size=TILE_SIZE * 1.2)
         self.font.render_to(self.app.screen, (WIN_W * 0.8, WIN_H * 0.10),
-                            text='level:', fgcolor='black',
+                            text='Level:', fgcolor='black',
                             size=TILE_SIZE * 1.2)
         self.font.render_to(self.app.screen, (WIN_W * 0.86, WIN_H * 0.18),
                             text=f'{self.app.tetris.level}', fgcolor='black',
