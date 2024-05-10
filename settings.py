@@ -9,7 +9,7 @@ BG_COLOR = (255, 219, 251)
 SPRITE_DIR_PATH = 'assets/sprites'
 FONT_PATH = 'assets/font/corneliafs.cornelia.ttf'
 
-ANIM_TIME_INTERVAL = 300
+ANIM_TIME_INTERVAL = 500
 FAST_ANIM_TIME_INTERVAL = 15
 
 TILE_SIZE = 50
@@ -30,8 +30,7 @@ TETROMINOES = {
     'L': [(0,0), (1, 0), (0, -1), (0, -2)],
     'I': [(0,0), (0, 1), (0, -1), (0, -2)],
     'S': [(0,0), (-1, 0), (0, -1), (1, -1)],
-    'Z': [(0,0), (1, 0), (0, -1), (-1, -1)],
-    '-': [(0,0), (1,0)]
+    'Z': [(0,0), (1, 0), (0, -1), (-1, -1)]
 }
 
 POS_STATISTICS = vec(0.52, 0.8)

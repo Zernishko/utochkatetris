@@ -47,6 +47,9 @@ class Tetris:
         self.tetromino = Tetromino(self)
         self.next_tetromino = Tetromino(self, current=False)
         self.speed_up = False
+        self.is_moving_right = False
+        self.is_moving_left = False
+
 
         self.level = 0
         self.score = 0
@@ -107,15 +110,19 @@ class Tetris:
                 self.next_tetromino = Tetromino(self, current=False)
                 self.statistics[self.tetromino.shape] += 1
 
-    def control(self, pressed_key):
+    def control(self, pressed_key, keydown):
         if pressed_key == pg.K_LEFT:
-            self.tetromino.move(direction='left')
+            self.is_moving_left = keydown
+            if keydown:
+                self.tetromino.move(direction='left')
         elif pressed_key == pg.K_RIGHT:
-            self.tetromino.move(direction='right')
-        elif pressed_key == pg.K_SPACE:
+            self.is_moving_right = keydown
+            if keydown:
+                self.tetromino.move(direction='right')
+        elif pressed_key == pg.K_SPACE and keydown:
             self.tetromino.rotate()
         elif pressed_key == pg.K_DOWN:
-            self.speed_up = True
+            self.speed_up = keydown
 
     def draw_grid(self):
         for x in range(FIELD_W):

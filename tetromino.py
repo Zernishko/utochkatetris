@@ -1,4 +1,5 @@
 from settings import *
+from tetris import *
 import random
 
 class Block(pg.sprite.Sprite):
@@ -93,6 +94,12 @@ class Tetromino:
 
     def update(self):
         self.move(direction='down')
+        if self.tetris.is_moving_left:
+            self.move(direction='left')
+        elif self.tetris.is_moving_right:
+            self.move(direction='right')
+
+
 
 
 
